@@ -5,18 +5,18 @@ import chart from './venn-chart';
 
 const clone = o => Object.assign({}, o);
 
-class controller {
-  constructor () {
-    this.editorOptions = {
-      data: this.dataPackage,
-      enableOpen: false,
-      enableProtected: true,
-      onChange: () => this.change()
-    };
-  }
+function controller () {
+  const $ctrl = this;
 
-  change () {
-    const data = this.dataPackage.resources
+  $ctrl.editorOptions = {
+    data: this.dataPackage,
+    enableOpen: true,
+    onChange,
+    $onInit: onChange
+  };
+
+  function onChange () {
+    const data = $ctrl.dataPackage.resources
       .filter(d => Boolean(d.data))
       .map(d => d.data.map(clone));
 
@@ -31,10 +31,6 @@ class controller {
     divs.enter().append('div');
 
     divs.each(chart);
-  }
-
-  $onInit () {
-    this.change();
   }
 }
 

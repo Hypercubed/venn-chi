@@ -37,12 +37,20 @@
 #_venn__chart text {
   cursor: default;
   pointer-events: none;
+}
 
+#_venn__chart svg {
+  overflow: visible;
 }
 
 .d3-tip-venn {
-  opacity: 1;
-  background-color: white;
+  opacity: 0.9;
+  background-color: black;
+  text-align: center;
+}
+
+.d3-tip-venn:after {
+  text-align: left;
 }
 
 .d3-tip {
