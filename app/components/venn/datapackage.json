@@ -1,0 +1,14 @@
+{
+  "name": "A Vennerable Challenge",
+  "title": "A Vennerable Challenge",
+  "description": "A Vennerable Challenge",
+  "resources": [
+    "data.tsv"
+  ],
+  "image": "venn.png",
+  "readme": "README.md",
+  "sources": [{
+    "name": "American Scientist",
+    "web": "http://www.americanscientist.org/issues/num2/a-vennerable-challenge/1"
+  }]
+}

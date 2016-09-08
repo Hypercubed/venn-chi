@@ -1,0 +1,49 @@
+{
+  "name": "chi-venn",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Project χ Venn Visualization",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J Harshbarger",
+  "license": "MIT",
+  "xo": {
+    "esnext": true,
+    "space": 2,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "ignores": [],
+    "rules": {
+      "import/no-extraneous-dependencies": 0,
+      "space-before-function-paren": [
+        2,
+        {
+          "anonymous": "always",
+          "named": "always"
+        }
+      ],
+      "no-warning-comments": 0,
+      "no-mixed-operators": 0
+    }
+  },
+  "devDependencies": {
+    "xo": "^0.16.0"
+  },
+  "dependencies": {
+    "xo": "^0.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypercubed/venn-chi.git"
+  },
+  "keywords": [
+    "venn"
+  ],
+  "bugs": {
+    "url": "https://github.com/Hypercubed/venn-chi/issues"
+  },
+  "homepage": "https://github.com/Hypercubed/venn-chi#readme"
+}
