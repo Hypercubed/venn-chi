@@ -1,3 +1,5 @@
+import pkg from '../package.json';
+
 export default {
   deploy: {
     ghPages: {
@@ -8,6 +10,6 @@ export default {
   template: {
     title: 'Project-χ - Venn',
     webcomponents: false,
-    version: '1.0.0'
+    version: pkg.version
   }
 };

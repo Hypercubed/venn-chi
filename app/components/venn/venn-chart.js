@@ -4,6 +4,10 @@ import venn from 'venn.js';
 import d3Tip from 'd3-tip';
 import 'd3-tip/examples/example-styles.css!';
 
+import {boolean} from 'chi-datapackage/src/lib/types';
+
+const castBoolean = boolean.default;
+
 export default function (data) {
   const container = d3.select(this);
 
@@ -42,7 +46,7 @@ export default function (data) {
   data.forEach(d => {
     d.size = Number(d.size);
     d.sets = keys.filter(k => {
-      d[k] = d[k] === 'true';
+      d[k] = castBoolean(d[k]);
       return d[k];
     });
     d.label = d.sets.join(' + ');
